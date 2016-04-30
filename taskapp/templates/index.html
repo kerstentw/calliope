@@ -1,0 +1,21 @@
+<h1> Calliope  </h1>
+
+{% autoescape off %}
+
+<div style = "height:500px; width: 75%; overflow: scroll;">
+{{previous_posts}}
+</div>
+
+{% endautoescape %}
+
+{{status}}
+<form action = "/index/" method = "POST">
+        
+    {% csrf_token  %}
+    Idea Title: <input type = "text" name = "idea_title"/><br/>
+    Idea: <input type = "text" name = "idea"/><br/>
+    <input type = "submit" value = "Submit idea!"/>
+
+</form>
+
+{{post_info}}

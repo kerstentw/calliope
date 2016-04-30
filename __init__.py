@@ -1,0 +1,1 @@
+from taskapp.app import *
