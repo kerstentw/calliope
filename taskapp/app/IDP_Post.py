@@ -44,7 +44,7 @@ class IdeaCollection(object):
 
         #Eventually use self.hashlist as a way to merge IdeaPads.
         self.hashlist = ['END'] # Treat as a reverse queue: front is oldest.  Tail is youngest
-        self.payMe = True
+        self.PAYABLE = False
         self.name = str(passhash)
     
         self.post_texts = PostDict.postdict()  
@@ -99,20 +99,24 @@ class IdeaCollection(object):
 
     def postSuccessfullyMade(self):
         self.last_post = tuple(x for x in time.localtime()[0:5])
+        self.PAYABLE = True
 
+    def reset(self):
+        ''' This resets the Payable switch for each cycle  '''
+        self.PAYABLE = False
 
     def checkForPayment(self):
         elapse_check = self.checkElapsedTime()
         if elapse_check  == 0:
             self.payMe = True
-            return self.payMe       
+            return self.PAYABLE 
  
         elif elapse_check > 0:
             self.payMe = False
-            return self.payMe
+            return self.PAYABLE
 
         else: # Implies error.  Assume status does not change.
-            return self.payMe
+            return self.PAYABLE
 
 
     def reHash(self,new_pass):
@@ -127,7 +131,7 @@ class IdeaCollection(object):
                      'creation_date' : self.creationtime,
                      'last_post'     : self.last_post,
                      'last_checked'  : self.current_time,
-                     'payable?'      : self.payMe
+                     'payable?'      : self.PAYABLE
                    }
 
         return my_stats
@@ -144,16 +148,21 @@ class IdeaCollection(object):
 		Adds idea_post_string into the Post
         '''
 
+        char_count = len(post_info)
+
         try:
-            if len(post_info) > 300:
-                return "Submission failed, Too many characters, must be less than 300 characters."
+            if char_count > 300:
+                return "Submission failed, Too many characters ({chars}),\
+                    must be less than 300 characters.".format(chars = char_count)
 
 
-            elif len(post_info) < 200:
-                return "Submission failed: Too few characters, must be greater than 200 characters."            
+            elif char_count < 200:
+                return "Submission failed: Too few characters ({chars}),\
+                   must be greater than 200 characters.".format(chars = char_count)            
             else:
 
                 self.post_texts[post_name + "::"+ str(self.current_time)] = post_info
+                self.postSuccessfullyMade() #Sets payable to true
                 return "Post successfully made"
         
         except:

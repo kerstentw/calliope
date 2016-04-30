@@ -1,0 +1,72 @@
+ccopy_reg
+_reconstructor
+p1
+(ctaskapp.app.IDP_Post
+IdeaCollection
+p2
+c__builtin__
+object
+p3
+NtRp4
+(dp5
+S'hashlist'
+p6
+(lp7
+S'END'
+p8
+asS'current_time'
+p9
+(I2016
+I4
+I30
+I17
+I0
+tp10
+sS'name'
+p11
+S'6f56bd883470c9d40adfd139e5e4b5b75ea8045b27b819bcfc7b1e3aaf71c9a4'
+p12
+sS'post_texts'
+p13
+(itaskapp.app.PostDict
+ControllerDict
+p14
+(dp15
+S'data'
+p16
+(dp17
+VTest2::(2016, 4, 30, 16, 53)
+p18
+S'<QueryDict: {u\'csrfmiddlewaretoken\': [u\'4YJ5yIhrMuzphfjgDZsz7FpvsyKytuda\'], u\'idea_title\': [u\'Test2\'], u\'idea\': [u"<QueryDict: {u\'csrfmiddlewaretoken\': [u\'4YJ5yIhrMuzphfjgDZsz7FpvsyKytuda\'], u\'idea_title\': [u\'\'], u\'idea\': [u\'\']}> "]}> '
+p19
+sVTestor::(2016, 4, 30, 16, 53)
+p20
+S', u\\\\\\\'idea_title\\\\\\\': [u\\\\\\\'Test2\\\\\\\'], u\\\\\\\'idea\\\\\\\': [u"<QueryDict: {u\\\\\\\'csrfmiddlewaretoken\\\\\\\': [u\\\\\\\'4YJ5yIhrMuzphfjgDZsz7FpvsyKytuda\\\\\\\'], u\\\\\\\'idea_title\\\\\\\': [u\\\\\\\'\\\\\\\'], u\\\\\\\'idea\\\\\\\': [u\\\\\\\'\\\\\\\']}> "]}> \\\']}> \']}> '
+p21
+sVTestor::(2016, 4, 30, 16, 54)
+p22
+S', u\\\\\\\'idea_title\\\\\\\': [u\\\\\\\'Test2\\\\\\\'], u\\\\\\\'idea\\\\\\\': [u"<QueryDict: {u\\\\\\\'csrfmiddlewaretoken\\\\\\\': [u\\\\\\\'4YJ5yIhrMuzphfjgDZsz7FpvsyKytuda\\\\\\\'], u\\\\\\\'idea_title\\\\\\\': [u\\\\\\\'\\\\\\\'], u\\\\\\\'idea\\\\\\\': [u\\\\\\\'\\\\\\\']}> "]}> \\\']}> \']}> '
+p23
+ssbsS'creationtime'
+p24
+(I2016
+I4
+I30
+I16
+I53
+tp25
+sS'passhash'
+p26
+g12
+sS'PAYABLE'
+p27
+I01
+sS'last_post'
+p28
+(I2016
+I4
+I30
+I16
+I54
+tp29
+sb.

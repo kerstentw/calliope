@@ -20,7 +20,7 @@ p9
 I4
 I30
 I16
-I1
+I31
 tp10
 sS'name'
 p11
@@ -46,10 +46,14 @@ p17
 S'data'
 p19
 (dp20
-sbsS'payMe'
+VCalliope::(2016, 4, 30, 16, 15)
 p21
+S'Calliope is a fancy shmancy app that allows you to track progress and gives you direct insentives for your work.  It allows you to self motivate on something not fun while not being taken down by the man!'
+p22
+ssbsS'payMe'
+p23
 I01
 sS'last_post'
-p22
+p24
 g14
 sb.

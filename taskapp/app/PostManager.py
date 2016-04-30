@@ -185,4 +185,17 @@ will cause problems.
 		
         post_list = post_instance.fetchAllPosts()
         return post_list
-        
+
+    def payable(self,post_instance, mode = 1):
+        '''  if mode is 1 it is for getting status
+             if mode is 2 it is for successfulposting
+             if mode is 3 it is for resetting
+        '''
+        if mode == 1:
+             return post_instance.PAYABLE
+
+        elif mode == 2:
+            post_instance.postSuccessfullyMade()
+    
+        elif mode == 3:
+            post_instance.reset()
