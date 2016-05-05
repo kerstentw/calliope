@@ -12,8 +12,8 @@ Payable this cycle? :: {{payability}}
 <form action = "/index/" method = "POST">
         
     {% csrf_token  %}
-    Idea Title: <input type = "text" name = "idea_title"/><br/>
-    Idea: <input type = "text" name = "idea"/><br/>
+    Idea Title: <input type = "text" name = "idea_title" maxlength = "100"/><br/>
+    Idea: <input type = "text" name = "idea" maxlength = "300"/><br/>
     <input type = "submit" value = "Submit idea!"/>
 
 </form>
